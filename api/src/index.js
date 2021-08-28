@@ -24,10 +24,10 @@ const startServer = () => {
         silence.save((err, savedSilence) => {
             if(err) 
                 return console.error(err);
-            console.log('saved', savedSilence);
+            console.log('saved with volumes', savedSilence);
             // savedSilence.speak();
-        })
-        console.log(`Server started on port: ${port}`);
+        });
+        console.log(`Server started on port: ${port}!`);
         console.log(silence.name);
     });
 };
@@ -38,6 +38,8 @@ const cb = (req, res) => {
 
 app.get('/', cb);
 app.get('/test', cb);
+app.get('/home', cb);
+app.get('/help', cb);
 
 connectDB()
     .on('error', console.log)
