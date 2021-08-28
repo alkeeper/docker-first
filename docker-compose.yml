@@ -14,10 +14,10 @@ services:
       - api_mongo
 
   api_mongo:
-    image: mongo:latest
+    image: mongo:4.4.8
     volumes:
-      - mongoData1:/data/db
+      - mongoData:/data/db
 
 volumes: 
-  mongoData1:
+  mongoData:
 

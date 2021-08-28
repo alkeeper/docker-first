@@ -24,7 +24,7 @@ const startServer = () => {
         silence.save((err, savedSilence) => {
             if(err) 
                 return console.error(err);
-            console.log('saved with volumes', savedSilence);
+            console.log('saved with volumes!', savedSilence);
             // savedSilence.speak();
         });
         console.log(`Server started on port: ${port}!`);
