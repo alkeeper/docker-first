@@ -15,4 +15,6 @@ services:
 
   api_mongo:
     image: mongo:latest
+    volumes:
+      - ./mongo-data:/data/db
 
